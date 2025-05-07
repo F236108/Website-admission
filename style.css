@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top left, #1d1b3f, #0d0c24);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(110, 142, 251, 0.4);
+  animation: fadeIn 1s ease;
+}
+.review-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.fullscreen-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #cccccc;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  transform: scale(1.03);
+}
+
+a {
+  color: #ff6bcb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/* Review Section Styling */
+#reviewSection {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 40px;
+  background: rgba(5, 46, 100, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(62, 95, 206, 0.4);
+  color: #a89595;
+  animation: fadeInUp 0.8s ease-out forwards;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+/* Header Styling */
+#reviewSection h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+/* Review Content Styling */
+#reviewContent {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  white-space: pre-wrap;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.3s ease;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+button:nth-child(1) {
+  background-color: #4caf50; /* Green for Back */
+  animation-delay: 0.6s;
+}
+
+button:nth-child(2) {
+  background-color: #ff6bcb; /* Pink for Download */
+  animation-delay: 0.8s;
+}
+
+button:nth-child(3) {
+  background-color: #ff416c; /* Red for Submit */
+  animation-delay: 1s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Back Button Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional Button Styles */
+button:nth-child(1):hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+button:nth-child(2):hover {
+  background-color: #ff3b7d; /* Darker pink on hover */
+}
+
+button:nth-child(3):hover {
+  background-color: #ff2a55; /* Darker red on hover */
+}
+
+/* Smooth Transitions */
+#reviewSection, #reviewContent {
+  transition: all 0.4s ease;
+}
+.review-section {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(110, 142, 251, 0.3);
+  animation: slideFadeIn 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+.review-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.review-section h3 {
+  color: #ff85c1;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.review-section p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.review-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-buttons button {
+  width: 48%;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

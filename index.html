@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2 id="formTitle">Sign In</h2>
+
+    <!-- Sign In Form -->
+    <form id="signInForm">
+      <input type="email" id="signInEmail" placeholder="Email" required />
+      <input type="password" id="signInPassword" placeholder="Password" required />
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a href="#" onclick="showSignUp()">Create one</a></p>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="signUpForm" class="hidden">
+      <input type="text" id="signUpName" placeholder="Full Name" required />
+      <input type="email" id="signUpEmail" placeholder="Email" required />
+      <input type="password" id="signUpPassword" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="showSignIn()">Sign In</a></p>
+    </form>
+
+  <!-- Personal Information Form -->
+<form id="personalForm" class="hidden">
+  <input type="text" id="fullName" placeholder="Full Name" required />
+  <input type="text" id="gender" placeholder="Gender" required />
+  <input type="date" id="dob" required />
+  <input type="text" id="contact" placeholder="Contact Number" required />
+  <input type="text" id="address" placeholder="Address" required />
+  <button type="submit">Next</button>
+</form>
+
+<!-- Educational History Form -->
+<form id="educationForm" class="hidden">
+  <button type="button" id="backToPersonal">← Back</button>
+  <input type="text" id="matric" placeholder="Matric School Name"  />
+  <input type="number" id="matricMarks" placeholder="Matric Marks"  />
+  <input type="text" id="inter" placeholder="Inter College Name" />
+  <input type="number" id="interMarks" placeholder="inter Class Marks"  />
+  <input type="text" id="otherQualifications" placeholder="Other Qualifications (if any)" />
+  <input type="text" id="grades" placeholder="Grades / GPA"  />
+  <input type="text" id="year" placeholder="Passing Year"  />
+  <button type="submit">Submit</button>
+ 
+</form>
+<!-- Review Section -->
+<div id="reviewSection" class="review-section hidden">
+  <h2>Review & Submit</h2>
+  <div id="reviewContent"></div>
+  <div class="review-buttons">
+    <button onclick="backToEducation()">← Back</button>
+    <button onclick="downloadUserDataAsText()">Download My Data (.txt)</button>
+    <button onclick="finalSubmit()">Submit</button>
+  </div>
+</div>
+
+<button id="downloadBtn" onclick="downloadUserDataAsText()" class="hidden">
+  Download My Data (.txt)
+</button>
+  <script src="script.js"></script>
+</body>
+</html>
