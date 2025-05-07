@@ -57,6 +57,7 @@ signInForm.addEventListener("submit", function (e) {
 // Save personal form data to localStorage
 personalForm.addEventListener("submit", function (e) {
   e.preventDefault();
+  const interestField = document.getElementById("interestField").value;
 
   const fullName = document.getElementById("fullName").value;
   const gender = document.getElementById("gender").value;
@@ -87,6 +88,7 @@ educationForm.addEventListener("submit", function (e) {
   const grades = document.getElementById("grades").value;
   const year = document.getElementById("year").value;
   const otherQualifications = document.getElementById("otherQualifications").value;
+  const interestField = document.getElementById("interestField").value;
 
   const educationInfo = {
     matric,
@@ -95,6 +97,7 @@ educationForm.addEventListener("submit", function (e) {
     interMarks,
     grades,
     year,
+    interestField,
     otherQualifications
   };
 
@@ -159,6 +162,8 @@ function displayReviewSection() {
     <p>Grades/GPA: ${education.grades || ""}</p>
     <p>Passing Year: ${education.year || ""}</p>
     <p>Other Qualifications: ${education.otherQualifications || ""}</p>
+    <p>Field of Interest: ${education.interestField || ""}</p>
+
   `;
 
   formTitle.textContent = "Review & Submit";
@@ -214,6 +219,8 @@ Inter Marks: ${education.interMarks || ""}
 Grades/GPA: ${education.grades || ""}
 Passing Year: ${education.year || ""}
 Other Qualifications: ${education.otherQualifications || ""}
+Field of Interest: ${education.interestField || ""}
+
 `;
 
   const blob = new Blob([content], { type: "text/plain" });
