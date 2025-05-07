@@ -40,14 +40,24 @@
 <!-- Educational History Form -->
 <form id="educationForm" class="hidden">
   <button type="button" id="backToPersonal">← Back</button>
-  <input type="text" id="matric" placeholder="Matric School Name" required />
-  <input type="number" id="matricMarks" placeholder="Matric Marks"  required/>
-  <input type="text" id="inter" placeholder="Inter College Name" required />
-  <input type="number" id="interMarks" placeholder="inter Class Marks" required />
+  <input type="text" id="matric" placeholder="Matric School Name"  />
+  <input type="number" id="matricMarks" placeholder="Matric Marks"  />
+  <input type="text" id="inter" placeholder="Inter College Name" />
+  <input type="number" id="interMarks" placeholder="inter Class Marks"  />
   <input type="text" id="otherQualifications" placeholder="Other Qualifications (if any)" />
-  <input type="text" id="grades" placeholder="Grades / GPA" required />
-  <input type="text" id="year" placeholder="Passing Year" required />
-  <button type="submit">Next</button>
+  <select id="interestField" required>
+    <option value="" disabled selected>Select a field of interest</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Business Administration">Business Administration</option>
+    <option value="Medical Sciences">Medical Sciences</option>
+    <option value="Arts and Humanities">Arts and Humanities</option>
+    <option value="Social Sciences">Social Sciences</option>
+  </select>
+  
+  <input type="text" id="grades" placeholder="Grades / GPA"  />
+  <input type="text" id="year" placeholder="Passing Year"  />
+  <button type="submit">Submit</button>
  
 </form>
 <!-- Review Section -->
